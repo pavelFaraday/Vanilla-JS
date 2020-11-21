@@ -1,0 +1,41 @@
+body {
+   background-color: #ced0ce;
+   min-height: 100vh;
+   text-align: center;
+}
+.banner {
+    font-size: 35px;
+    text-transform: 35px;
+    margin: 25px 0 50px 0;
+    color: #f15025;
+    font-family: sans-serif;
+}
+.message {
+    font-size: 40px;
+    text-transform: capitalize;
+    text-align: left;
+    background-color: #fff;
+    width: 75%;
+    height: 170px;
+    padding: 20px;
+    margin: 20px auto 40px auto;
+}
+#text {
+    display: block;
+    padding: 40px 20px;
+    margin: 0 auto;
+    width: 75%;
+    font-size: 150%;
+}
+.btn {
+    margin: 40px 10px;
+    padding: 10px 15px;
+    font-size: 25px;
+    color: #191716;
+    background-color: #f15025;
+    cursor: pointer;
+}
+.btn:hover {
+    color: #f15025;
+    background-color: #191716;
+}

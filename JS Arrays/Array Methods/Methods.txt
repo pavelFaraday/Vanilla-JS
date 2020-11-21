@@ -1,0 +1,186 @@
+
+1) .push() --- to add one or more elements at the and of an array. And it also returns new length of an array.
+[1,2,3,4 +end]
+
+2) .pop() --- remove last item from an array.
+[1,2,3,4 -end]
+
+3) .unshift() --- adds one or more elements at the beginning of an array and returns new length of an array.
+[+start 2,3,4,5]
+
+4) .shift() --- remove the first element of an array and returns it.
+[-start 2,3,4,5]
+
+5) .concat() --- to merge/concatinate two different arrays into one new array. 
+    Original arrays will not be changed !
+A[] + B[] +C[] === Sum[];
+
+6) .every() --- executes a given function on every items of an array and returns true only if the callback function returns a true value for all the items inside an array, if the false value is found will return false immediately.
+
+ |  |  |  |
+[A, B, C, D] --- true
+ |  |  |  |  
+
+ |     |  |
+[A, B, C, D] --- false
+ |     |  |  
+
+ 7) .some() --- executes a given function on the elements of an array and returns true if the callback function returns a true value for at least one element inside of the array. If all of the elements of array will return false value, then .some() Method will return false also.
+
+ .some() method will run on each element of an array only until it does find element we searched for.. Before this, it will stop doing enything !!!
+ 
+ Opozite of .every() method.
+
+            STOP!
+             |
+C? => [A, B, C, D, C] --- true | C
+             
+K? => [A, B, C, D, C] --- false | -1
+
+8) .fill() --- changes all the elements inside an array with the provided value.
+It modifies original array too !!
+
+[A, B, C, D] => [E, F, G, H]
+
+9) .filter() --- creates a new array by removing all the elements for the which the callback function returns falsy value; Consider it as a test of the items of an array - if the item from the array returns true for a callback then we keep it, otherwise we remove it;
+
+[false, true, true, false, true, false] => [true, true, true]
+
+10) .find() --- will search inside of an array and it will return the first element, for which the callback function returns true value. If it doesn't find one, then it will return undefined. 
+
+C? => [A, B, C, D] --- C
+
+11) .findIndex() --- very similar to the find method - it will find an element and  will return its index[]
+
+C? => [A, B, C, D] --- 2
+
+12) .includes() --- find if the element is included inside an array.
+    Returns boolean answer!
+
+C? => [A, B, C, D] --- true
+
+13) .flat() --- creates a new array with all the sub-arrays elements concatenated into it. It is fro nested arrays.
+flat(3) --- Is the depth of the arrays that we want to combine the total number of.
+
+[1, [2, [3, [4]]]] => [1, 2, 3, 4]
+
+14) .forEach() --- executes a given function on every element from an array. 
+
+[A, B, C, D] => A, B, C, D
+
+15) .from() --- creates a new shallow coppied array from an array like or iterable object.
+
+'I am' => [ 'I', ' ', 'a', 'm' ]
+
+16) .indexOf() --- returns the first index at which a given element can be found inside array. It searchs from the beginnig of an array!
+    .lastIndexOf() --- returns last index at which a given element can be found inside array. It searchs from the end of an array!
+    returned result |-1| means, that element we searched not found, array doesn't exists it.
+
+                --->   | 
+indexOf B[]? => [A, B, C, D, C, E] --- 2
+                --->   |
+
+                              |   <---
+lastIndexOf B[]? => [A, C, D, C, B, E] --- 3
+                              |   <---
+
+17) Array.isArray() --- checks if the passed value is an array.
+
+isArray([A, B, C]) --- true
+isArray('Hallo') --- false
+
+18) .join() --- creates new string from an array by concatenating all the elements from that array; 
+    By default it is 'comma' separator, but you can specify what separator you want to be added between the items
+
+Array => String
+
+['Russia', 'USA', 'Georgia'] => .join() --- Russia,USA,Georgia
+['Russia', 'USA', 'Georgia'] => .join(', ') --- Russia, USA, Georgia
+['Russia', 'USA', 'Georgia'] => .join(' - ') --- Russia - USA - Georgia
+
+19) .map() --- executes a given function from an array and returns a new reproductive array. 
+    It doesn't changes original array !
+    .map() will do the same thing as the forEach method. Difference is that fopEach is affecting the original array. | .map() doesn't changes original array !
+    It doesn't changes original array - it will give us back new array
+
+ArrayA = [1,2,3];
+ArrayB = ArrayA.map((item) => {
+    return item * 2;
+});
+
+--- ArrayA [1,2,3]
+--- ArrayB [2,4,6]
+
+20) .reduce() --- executes the callback function on every element of an array and it will return one single output value. It is like getting an array of items and adding all of the items inside one resulting value; Basic idea of .reduce() array method is - you have an array of elements (strings, numbers, objects, nested arrays) and you want to compress them inside one returning value;
+
+nums = [1,2,3,4,5];
+sum = nums.reduce((accumulator, value) => {
+    return accumulator + value;
+}); --- 15
+
+21) .reverse() --- reverses an array, meaning that first element will become last, and the last element will become first;
+    It modifies/changes original Array !!! - for solving this problem, We can use .concat() method there
+
+[A, B, C, D] => [D, C, B, A]
+
+22) .slice() --- returns shallow copy of a portion of an array. It can be used to retrieve a portion of an array. It's useful because we usually don't want to modify the hole original array.
+    It doesn't modifies an original array!
+    You can provide the beginnig index and the last index.
+    If we doesn't provide parametres in .slice, we just get copy of hole array.
+
+nums = [1,2,3,4,5];
+nums.slice(1, 4); --- [2,3,4]
+nums.slice(); --- [1,2,3,4,5]
+
+23) .splice() --- changes an array by removing, replacing or adding existing elements from it.
+
+a) REMOVE --- remove from 2th index, remove last 3 elements
+nums = [1,2,3,4,5];
+nums.splice(2, 3); --- [3,4,5]
+nums --- [1,2]
+
+b) REPLACE --- delete last 3 elements and replace them with 6,7
+nums = [1,2,3,4,5];
+nums.splice(2, 3, 6, 7); --- [3,4,5]
+nums --- [1,2,6,7]
+
+c) ADDING --- don't remove anything and just 6,7
+nums = [1,2,3,4,5];
+nums.splice(5, 0, 6, 7); --- []
+nums ---  [ 1, 2, 3, 4, 5, 6, 7 ]
+
+24) .sort() --- sorts elements of an array by manipulating on an array.
+    The default sort order is ascending - it will convert elements from the array to streams and the it will compare their sequences of utf-16 unit values.
+
+products = [
+    {
+        name: 'notebook',
+        price: 1000,
+    }, 
+    {
+        name: 'TV',
+        price: 1500,
+    },
+    {
+        name: 'phone',
+        price: 500,
+    }
+];
+
+products.sort((a, b) => {
+    return a.price - b.price;
+});
+
+console.log(products);
+
+====>
+
+[ { name: 'phone', price: 500 },
+  { name: 'notebook', price: 1000 },
+  { name: 'TV', price: 1500 } ]
+
+# ---------------------------------------------------------------------------- #
+
+
+
+

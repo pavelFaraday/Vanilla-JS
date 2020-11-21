@@ -1,0 +1,41 @@
+body {
+    background-color: #ced0ce;
+    min-height: 100vh;
+    text-align: center;
+    padding: 100px;
+}
+#container {
+    background-color: #fff;
+    width: 80vh;
+    padding: 40px;
+    height: 35vh;
+    border-left: 3px solid #f15050;
+    margin: 0 auto;
+}
+#quote-text {
+    min-height: 20vh;
+}
+#container h1 {
+    text-align: left;
+    font-size: 20px;
+}
+#container p {
+    text-align: right;
+    text-transform: capitalize;
+    font-style: italic;
+    font-size: 20px;
+    color: #ced0ce;
+}
+#btn {
+    margin-top: 160px;
+    font-size: 25px;
+    padding: 10px 20px;
+    background-color: #191716;
+    color: #f15050;
+    text-transform: uppercase;
+}
+#btn:hover {
+    color: #191716;
+    cursor: pointer;
+    background-color: #f15050;
+}
