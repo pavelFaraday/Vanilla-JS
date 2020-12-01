@@ -59,7 +59,7 @@ C? => [A, B, C, D] --- 2
 
 C? => [A, B, C, D] --- true
 
-13) .flat() --- creates a new array with all the sub-arrays elements concatenated into it. It is fro nested arrays.
+13) .flat() --- creates a new array with all the sub-arrays elements concatenated into it. It is for nested arrays.
 flat(3) --- Is the depth of the arrays that we want to combine the total number of.
 
 [1, [2, [3, [4]]]] => [1, 2, 3, 4]
@@ -101,7 +101,7 @@ Array => String
 19) .map() --- executes a given function from an array and returns a new reproductive array. 
     It doesn't changes original array !
     .map() will do the same thing as the forEach method. Difference is that fopEach is affecting the original array. | .map() doesn't changes original array !
-    It doesn't changes original array - it will give us back new array
+    It doesn't changes original array - it will give us back new array.
 
 ArrayA = [1,2,3];
 ArrayB = ArrayA.map((item) => {
@@ -149,7 +149,7 @@ nums = [1,2,3,4,5];
 nums.splice(5, 0, 6, 7); --- []
 nums ---  [ 1, 2, 3, 4, 5, 6, 7 ]
 
-24) .sort() --- sorts elements of an array by manipulating on an array.
+24) .sort() --- sorts elements of an array by manipulating on an array. It modifies original array too !
     The default sort order is ascending - it will convert elements from the array to streams and the it will compare their sequences of utf-16 unit values.
 
 products = [
