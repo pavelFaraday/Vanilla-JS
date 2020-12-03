@@ -1,0 +1,35 @@
+<!-- The FormData interface provides a way to easily construct a set of key/value pairs representing form fields and their values, which can then be easily sent using the XMLHttpRequest.send() method. It uses the same format a form would use if the encoding type were set to "multipart/form-data". -->
+
+<!-- It's a way for people to bundle data/information to send it to the server. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FormData Objects</title>
+</head>
+
+<body>
+    <div id="output">
+        <pre></pre>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let fd = new FormData();
+            fd.append('name', 'Bubba');
+            fd.append('id', 1234);
+            fd.append('created_dt', Date.now());
+
+            console.log(Array.from(fd));
+
+            for (let obj of fd) {
+                console.log(obj)
+            }
+        });
+    </script>
+</body>
+
+</html>
