@@ -27,8 +27,12 @@ function Bysicle(speed, brand, weight) {
     this.speed = speed;
     this.brand = brand;
     this.weight = weight;
+    this.inflateTires = function(){
+        this.weight += 2;
+    };
 }
 
 myBysicle = new Bysicle(120, 'Toyota', 59);
 console.log(myBysicle);
+console.log(myBysicle.inflateTires());
 

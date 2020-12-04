@@ -1,0 +1,3 @@
+// Prototypes is a concept in javascript, which lets you build objects using a template or a blueprint. JS doesn't have a concept of _classes_. It has Prototypes to build some kind of blueprint/template which influences object. You can create behaviors that effect multiple objects by using prototypes.
+
+// What happens when Javascript engine processes a function? Remember, functions are basically objects in JS. So, when the engine processes the function, it creates an object. But, whenever the JS engine processes functions, it actually creates two objects for one single function: first object is for function itself, and the secod is _Prototype_ object.
