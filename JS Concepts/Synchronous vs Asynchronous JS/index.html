@@ -1,0 +1,61 @@
+<!-- Javascript is a single threaded language. meaning that it's a single process in computer. That means that for the most part you write a code from top to bottom (Procedural Way).
+
+With Asynchronous code we can set Timeout (setTimeout) so, I am telling the computer I want to run this function, I don't want to do it until at least a thousand milliseconds into the future or 10 minutes from now.
+
+## Ajax calls - When you are calling off to a server somewhere to say give me some data back. I don't know when that is comming back  - Specifically I am hoping that at some point in the very near future I'll get it back, but I don't know exactly when and because I don't know exactly when, my next line of code it doesn't know a value. Now I am in Asynchronous situation - something is running, but it's kind of been put off to the side. The main JS says: I've started the process for you, but I don't know when I'm gonna get the answer, so I'm not gonna waste time, sitting here, waiting for that to come back. I'm going to continue on to next line of code - I'm going to see what else I can do until that gets back. When that gets back, if you want me to deal with it, fine - I Will, but until then I'm gonna keep going.
+
+setTimeout, callbacks for geolocation, Promises, fetch, ajax calls, filesystem interaction, database calls, even DOM event listeners ---- These are making Asynchronous Code -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Synchronous vs. Asynchronous Functions</title>
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+    <h1>Heading</h1>
+
+    <script>  
+    // Synchronous Code
+        let a = 5;
+        let b = 50;
+        
+        let a1 = (function (){ return 5 })()
+        let b1 = (function (){ return 50 })()
+        
+        console.log( a1 );
+        console.log( b1 );
+        
+        let a2 = function(num){ return 5*num }
+        let b2 = function() { return 50 }
+        
+        console.log( a2(b2()) );
+        
+        /**
+        setTimeout, callbacks for geolocation, Promises, fetch, ajax, filesystem interaction, database calls, even DOM event listeners
+        **/
+        
+        let a3 = 100;
+        setTimeout( function(){ a3++;  }, 0);
+        console.log(a3);
+        setTimeout( function(){ console.log(a3) }, 0)
+        
+        let p = new Promise(function(resolve, reject){
+            setTimeout( function(){
+                resolve("Yo!");
+            }, 0)
+            
+        });
+        console.log(p);
+        setTimeout(function(){
+            console.log(p);
+        }, 10);
+        console.log(p);
+        p.then(function(val){
+            console.log(val);
+        })
+        
+    </script>
+</body>
+</html>
