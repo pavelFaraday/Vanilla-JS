@@ -23,7 +23,7 @@ if (0 && 1) {
 }
 
 
-(1 && 1) ? console.log('true') : console.log('false');  // true
+// (1 && 1) ? console.log('true') : console.log('false');  // true
 
 /* -------------------------------------------------------------------------- */
 
@@ -52,7 +52,7 @@ let g = () => {
 
 // (obj.boolean === true && f) ? console.log('Yes') : console.log('No'); // Yes
 
-(obj.boolean === true && f2()) ? console.log('Yes') : console.log('No'); // No --- beceause num2 = 0; and 0 is evaluated as FALSY value
-(obj.boolean === true && g()) ? console.log('Yes') : console.log('No----'); // No---- Because Functions that do not have 'return' statement wll by default return 'undefined'
+// (obj.boolean === true && f2()) ? console.log('Yes') : console.log('No'); // No --- beceause num2 = 0; and 0 is evaluated as FALSY value
+// (obj.boolean === true && g()) ? console.log('Yes') : console.log('No----'); // No---- Because Functions that do not have 'return' statement wll by default return 'undefined'
 
 
