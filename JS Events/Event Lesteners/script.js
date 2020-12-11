@@ -35,7 +35,7 @@ Arrow function, Anonimous function you CAN'T REUSE into another events !
 
 /* -------------------------------------------------------------------------- */
 // add EventListener to the DOM
-// DOMContentLoaded means: First Browser must finish reading through all the HTML document. So, after this moment, it will read JS document.
+// DOMContentLoaded means: First Browser must finish reading through all the HTML document. So, after this moment, it will read JS document and function 'imFunction'.
 
 document.addEventListener('DOMContentLoaded', imFunction);
 
@@ -50,7 +50,7 @@ function imFunction(){
 
     lnk.addEventListener('click', linkClick);
     function linkClick(ev) {
-        ev.preventDefault();  // Stop default browser behaviour - stop link from the being followed
+        ev.preventDefault();  // ! Stop default browser behaviour - stop link from the being followed
         console.log(ev.type, ev.target, ev.currentTarget);
     }
 
