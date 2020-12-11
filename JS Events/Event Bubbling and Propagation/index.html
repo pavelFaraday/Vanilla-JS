@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling and Propagation</title>
+    <style>
+        main, div, p, span{
+            border: 2px solid gray;
+        }
+        main {
+            width: 90%;
+            height: 300px;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        div {
+            width: 70%;
+            margin: 0 auto;
+            height: 200px;
+            margin-top: 20px;
+        }
+        p {
+            width: 50%;
+            margin: 0 auto;
+            height: 100px;
+            margin-top: 20px;
+        }
+        span {
+            width: 50%;
+            margin: 0 auto;
+            height: 50px;
+            display: block;
+            margin-top: 20px;
+        }
+        .gold {
+            background: gold;
+        }
+
+    </style>
+</head>
+<body>
+    <main id='m'>
+        <div id="d">
+            <p id="p">
+                <span id="s"></span>
+            </p>
+        </div>
+    </main>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
