@@ -104,9 +104,13 @@ The process is called “bubbling”, because events “bubble” from the inner
 ----------------------------------------------------------------------------
 ----------------------------------------------------------------------------
 
-___For STOPPING Bubbling add into the function of event___
+___For STOPPING Bubbling - add into the function of event___
 * ev.stopPropagation();  
 
+___choose target's parents too for event (span -> p → div..) Bubbling Principle___
+* ev.target;
+
+___choose concretly this one target (div, tag, class..) NOT Bubbling Principle___
 ___See good example at: https://www.w3schools.com/jsref/tryit.asp?filename=try_dom_event_currenttarget
 * ev.currentTarget; 
 
