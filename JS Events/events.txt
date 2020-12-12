@@ -114,6 +114,7 @@ ___choose target's parents too for event (span -> p → div..) Bubbling Principl
 ___choose concretly this one target (div, tag, class..) NOT Bubbling Principle___
 ___See good example at: https://www.w3schools.com/jsref/tryit.asp?filename=try_dom_event_currenttarget
 * ev.currentTarget; 
+'<input type="text" id="txt">'
 
 ___How add CSS class to element:
 * target.className = 'gold'; 
@@ -133,3 +134,27 @@ Event Listeners actually have a built-in handle event method: that means, we can
 
 *    --this-- means: this hole object ('let obj') handles all events, it points to hole 'let obj' and says: hey, look at the handleEvent function and with it handle all events !!!
 *    --handleEvent-- :  it handles all Events into object ('let obj'). 'handleEvents' is a special name, it is built-in method. One function is handling all of events and redirects them throughout.
+
+
+/* -------------------------------------------------------------------------- */
+/*                       Keyboard events in the Browser                       */
+/* -------------------------------------------------------------------------- */
+
+* let target = ev.currentTarget;   --- --- ---    <input type="text" id="txt">
+
+___only name of current tag ('input') with Caps-Lock___
+* target.tagName --- --- --- INPUT
+
+___unicode value of the character that has been typed/pressed. Depending on which browser u are and when u are running this, there are few different properties/possibilities that could give u the Unicode character for whatever was pressed on the kaybord___
+* ev.char || ev.charCode || ev.which
+
+___Convert unicode value into string___
+* String.fromCharCode(char); --- --- --- 75 -> K
+https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html
+https://www.w3schools.com/charsets/ref_html_ascii.asp
+
+___Keybord Events (very similar to Mouse events):___
+* keydown - when u are pressing key
+* keyup - when u release key
+* keypress - when u done both (keydown + keyup)
+
