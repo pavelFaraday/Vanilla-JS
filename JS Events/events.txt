@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', imFunction);
 
 -- input --
 ___when the person writes something into input___
+
 target.addEventListener('input', (ev) => {
     console.log(ev.type, ev.target, ev.target.value);
 });
@@ -122,3 +123,13 @@ ___How remove CSS class from element:
 
 ___All events after this function will stop:
 * ev.stopImmediatePropagation();
+
+
+# ---------------------------------------------------------------------------- #
+#                          Built-in handleEvent method                         #
+# ---------------------------------------------------------------------------- #
+
+Event Listeners actually have a built-in handle event method: that means, we can create one function that handles all the events that are happennig to an object.
+
+*    --this-- means: this hole object ('let obj') handles all events, it points to hole 'let obj' and says: hey, look at the handleEvent function and with it handle all events !!!
+*    --handleEvent-- :  it handles all Events into object ('let obj'). 'handleEvents' is a special name, it is built-in method. One function is handling all of events and redirects them throughout.
