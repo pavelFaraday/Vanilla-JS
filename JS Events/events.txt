@@ -40,8 +40,6 @@ ___DOMContentLoaded / First Browser must finish reading through all the HTML doc
 
 document.addEventListener('DOMContentLoaded', imFunction);
 
-
-
 # ---------------------------------------------------------------------------- #
 #                                Event Listeners:                              #
 # ---------------------------------------------------------------------------- #
@@ -122,6 +120,12 @@ ___How add CSS class to element:
 ___How remove CSS class from element:
 * element.className = ''; 
 
+--------/ OR /--------
+
+* div.classList.remove("foo");
+* div.classList.add("anotherclass");
+
+
 ___All events after this function will stop:
 * ev.stopImmediatePropagation();
 
@@ -158,3 +162,18 @@ ___Keybord Events (very similar to Mouse events):___
 * keyup - when u release key
 * keypress - when u done both (keydown + keyup)
 
+# ---------------------------------------------------------------------------- #
+#                                 Mouse Events                                 #
+# ---------------------------------------------------------------------------- #
+
+Mouse Events - (MouseOver/MouseOut, MouseEnter/MouseLeave) it's look like they do same thing, But difference is _How they handle Bubbling_
+
+___When you move mouse over the object/გადატარება___
+* MouseOver 
+___When you remove mouse from the object/მოცილება___
+* MouseOut 
+
+___When you move mouse over the object/გადატარება___
+* MouseEnter 
+___When you remove mouse from the object/მოცილება___
+* MouseLeave 
