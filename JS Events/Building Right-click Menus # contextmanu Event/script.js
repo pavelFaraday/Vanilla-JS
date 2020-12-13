@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', function(){
     menu.classList.add('off');
     
     //add the right click listener to the box
-    // ! contextmanu Event
+    
     let box = document.getElementById('box');
-    box.addEventListener('contextmenu', showmenu);
+    box.addEventListener('contextmenu', showmenu);  // ! contextmanu Event
     
     //add a listener for leaving the menu and hiding it
     menu.addEventListener('mouseleave', hidemenu);

@@ -1,3 +1,108 @@
+<!--
+ ----------------------------------------------------------------------- 
+                      * setTimeout() & setInterval()                       
+ ----------------------------------------------------------------------- 
+
+JavaScript can be executed in time-intervals.
+This is called timing events.
+
+__Executes a function, after waiting a specified number of milliseconds___
+* setTimeout(function, milliseconds)
+
+__Same as setTimeout(), but repeats the execution of the function continuously__
+* setInterval(function, milliseconds)
+
+ ----------------------------------------------------------------------- 
+                           * removeEventListener                           
+ ----------------------------------------------------------------------- 
+
+Remove a "mousemove" event that has been attached with the addEventListener() method:
+
+___Attach an event handler to <div>___
+document.getElementById("myDIV").addEventListener("mousemove", myFunction);
+
+___Remove the event handler from <div>___
+document.getElementById("myDIV").removeEventListener("mousemove", myFunction);
+
+ ----------------------------------------------------------------------- 
+                              * parentElement                              
+ ----------------------------------------------------------------------- 
+
+https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_node_parentelement_hide
+
+__The parentElement property returns the parent element of the specified element__
+
+<div>
+    <p onclick="this.parentElement.style.display = 'none';">
+        To close this container, click on this text.
+    </p>
+</div>
+
+ ----------------------------------------------------------------------- 
+                              * removeChild()                              
+ ----------------------------------------------------------------------- 
+
+https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_node_removechild
+
+___The removeChild() method removes a specified child node of the specified element___
+
+function myFunction() {
+  var list = document.getElementById("myList");
+  list.removeChild(list.childNodes[0]);
+}
+
+ ----------------------------------------------------------------------- 
+                              * appendChild()                              
+ ----------------------------------------------------------------------- 
+
+https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_node_appendchild
+
+___The appendChild() method appends a node as the last child of a node___
+
+function myFunction() {
+  var newLI = document.createElement("LI");
+  var text = document.createTextNode("Water");
+  newLI.appendChild(text);
+  document.getElementById("myList").appendChild(newLI);
+}
+
+Oposite of removeChild() !
+
+ ----------------------------------------------------------------------- 
+                      * createTextNode()  |||  textContent()               
+ ----------------------------------------------------------------------- 
+
+___The createTextNode() method creates a Text Node with the specified text___
+* createTextNode()
+
+___The textContent property sets or returns the text content of the specified node, and all its **descendants**___
+* textContent
+
+<p>Click the button get the text content of the button element.</p>
+<button onclick="myFunction()">Try it</button>
+
+<div id="myBtn">
+    <p>Ble Blu</p>
+    <p>Ble Blu</p>
+    <p>Ble Blu</p>
+</div>
+
+<p id="demo"></p>
+
+function myFunction() {
+  var x = document.getElementById("myBtn").textContent;
+  document.getElementById("demo").innerHTML = x;  
+}
+
+ ----------------------------------------------------------------------- 
+                                *  on()                                   
+ ----------------------------------------------------------------------- 
+
+The on() method attaches one or more event handlers for the selected elements and child elements.
+
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,8 +126,10 @@
 <script>
     let partyStarted = function() {
         // add a click listener to existing list items
-        document.querySelectorAll('.list-item').forEach(li=>li.addEventListener('click', randomThing));
-        // add another list item every 2 seconds
+        document.querySelectorAll('.list-item').forEach((li) => {
+            li.addEventListener('click', randomThing)
+        });
+
         setInterval(addItem, 1000);
     };
 
@@ -31,9 +138,9 @@
         li.className = 'gold';
 
         setTimeout((function(){
-            this.removeEventListener('click', randomThing); // remove event Listener
+            this.removeEventListener('click', randomThing); // remove event Listener  
             this.parentElement.removeChild(this);
-        }).bind(li), 500);
+        }).on(li), 500);
         li = null;
     };
 
@@ -41,9 +148,9 @@
         let ul = document.querySelector('.list-view');
         let li = document.createElement('li');
         li.className = 'list-item';
-        li.textContent = 'Next Post';
+        li.textContent = 'Next Post'; 
         li.addEventListener('click', randomThing);
-        ul.appendChild(li);
+        ul.appendChild(li);  
     };
 
     document.addEventListener('DOMcontentLoaded', partyStarted);
