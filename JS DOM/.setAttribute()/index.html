@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setAttribute</title>
+    <style>
+        .red {
+            color:red;
+        }
+        .backGray{
+            background: gray;
+            color: white;
+        }
+        .nightMode {
+            background: black;
+        }
+        .dayMode {
+            background: white;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div> 
+        <input class='black'; type="text" name="malk" id="water">
+        <button onclick="changeBackground()">Change Background</button>
+        <button onclick="changeBodyBlack()">night mode</button>
+        <button onclick="changebodyWhite()">day mode</button>
+    </div>
+
+    <script>
+        // 1) 
+        document.getElementById('water').setAttribute('name', 'Gordon');
+
+        // 2)
+        document.getElementById('water').setAttribute('class', 'red');
+
+        // 3) 
+        function changeBackground() {
+            document.getElementById('water').setAttribute('class', 'backGray');
+        }
+
+        // 4) night mode
+        function changeBodyBlack() {
+            document.body.setAttribute('class', 'nightMode');
+        }
+
+        // 5) day Mode
+        function changebodyWhite() {
+            document.body.setAttribute('class', 'whiteMode');
+        }
+    </script>
+</body>
+</html>
