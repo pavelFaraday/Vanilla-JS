@@ -8,12 +8,27 @@
 </head>
 <body>
     
-    <div> </div>
+    <div></div>
+
+    <ul id="myList">
+        <li>Apple</li>
+    </ul>
 
     <script>
         let newP = document.createElement('p');
         // document.body.appendChild(newP); 
         document.querySelector('div').appendChild(newP);
+
+// ----------------------------------------------------------------------- 
+
+        let ul = document.getElementById('myList');
+        let fruits = ['Banana', 'Orange', 'Peach'];
+
+        for (let fruit of fruits) {
+            let li = document.createElement('li');
+            li.textContent = fruit;
+            ul.appendChild(li);
+        };
     </script>
 </body>
 </html>
