@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textContent | innerHTML</title>
+</head>
+<body>
+    <!-- 
+        textContent() - get and set text content of a node/element 
+        .innerHTML - create HTML tag with text
+    -->
+    <h1 id="header">Welcome guest!</h1>
+    <button onclick="alertMe()">alert</button>
+    <button onclick="defaultTxt()">Back to Default Text</button>
+    <br>
+    <br>
+    <textarea id="text" cols="30" rows="10"></textarea>
+    <button onclick="ChangeTxtInput()">Change with input Text</button>
+    <br>
+    <br>
+    <button onclick="addTagWithText()">add tag with text (innerHTML)</button>
+
+    <div id="newDiv" style="background: gray;">
+        DIV
+    </div>
+<!-- ----------------------------------------------------------------------- -->
+
+    <script>
+        let header = document.getElementById('header');
+
+        function alertMe() { 
+            alert(header.textContent);
+        };
+    
+        function defaultTxt() { 
+            header.textContent = 'Welcome guest!';
+        }
+
+        function ChangeTxtInput() { 
+            let inputText = document.getElementById('text').value;
+            header.textContent = inputText;
+        }
+        
+        function addTagWithText() {
+            let myDiv = document.getElementById('newDiv');
+            myDiv.innerHTML = '<p>Hy, I am innerHTML</p>';
+        }
+    </script>
+</body>
+</html>

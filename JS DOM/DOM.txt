@@ -1,19 +1,33 @@
 *** .createElement() ***
---- create new HTML TAG ---
+--- create new HTML TAG 
 
 let newP = document.createElement('p');
 ---------------------------------------------------
 *** .appendChild() ***
---- add HTML child TAG to parent TAG ---
+--- add HTML child TAG to parent TAG 
 
 document.body.appendChild(newP);
 document.querySelector('div').appendChild(newP);
 ---------------------------------------------------
 *** .setAttribute() ***
---- add attrubute and value/name of attrubute to HTML tag |or| change value of existing attribute ---
+--- add attrubute and value/name of attrubute to HTML tag |or| change value of existing attribute 
 
 __add new attribute 
- document.body.setAttribute('class', 'nightMode');
+document.body.setAttribute('class', 'nightMode');
 
 __change value/name
- document.getElementById('water').setAttribute('name', 'Gordon');
+document.getElementById('water').setAttribute('name', 'Gordon');
+---------------------------------------------------
+*** .textContent() ***   
+--- get and set text content of a node/element 
+
+___get text of Element
+alert(Element.textContent);
+
+___set text of element
+Element.textContent = 'Welcome guest!';
+ ---------------------------------------------------
+*** .innerHTML ***   
+--- create HTML tag with text
+
+myDiv.innerHTML = '<p>Hy, I am innerHTML</p>';
