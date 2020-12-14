@@ -12,45 +12,63 @@
             background: gray;
             color: white;
         }
+        .addInput{
+            background: red;
+            color: black;
+            display: block;
+            margin: 5px 0;
+        }
         .nightMode {
             background: black;
         }
         .dayMode {
             background: white;
         }
+        
     </style>
 
 </head>
 <body>
     
-    <div> 
-        <input class='black'; type="text" name="malk" id="water">
-        <button onclick="changeBackground()">Change Background</button>
-        <button onclick="changeBodyBlack()">night mode</button>
-        <button onclick="changebodyWhite()">day mode</button>
-    </div>
+<div id="myDiv"> 
+    <input class='black'; type="text" name="malk" id="water">
+    <button onclick="changeBackground()">Change Background</button>
+    <button onclick="changeBodyBlack()">night mode</button>
+    <button onclick="changebodyWhite()">day mode</button>
+    <button onclick="addInput()">add new input</button>
+</div>
 
-    <script>
-        // 1) 
-        document.getElementById('water').setAttribute('name', 'Gordon');
+<script>
+    // 1) 
+    document.getElementById('water').setAttribute('name', 'Gordon');
 
-        // 2)
-        document.getElementById('water').setAttribute('class', 'red');
+    // 2)
+    document.getElementById('water').setAttribute('class', 'red');
 
-        // 3) 
-        function changeBackground() {
-            document.getElementById('water').setAttribute('class', 'backGray');
-        }
+    // 3) 
+    function changeBackground() {
+        document.getElementById('water').setAttribute('class', 'backGray');
+    }
 
-        // 4) night mode
-        function changeBodyBlack() {
-            document.body.setAttribute('class', 'nightMode');
-        }
+    // 4) night mode
+    function changeBodyBlack() {
+        document.body.setAttribute('class', 'nightMode');
+    }
 
-        // 5) day Mode
-        function changebodyWhite() {
-            document.body.setAttribute('class', 'whiteMode');
-        }
+    // 5) day Mode
+    function changebodyWhite() {
+        document.body.setAttribute('class', 'whiteMode');
+    }
+
+
+// ----------------------------------------------------------------------- 
+
+    function addInput() {
+        let newInput = document.createElement('input');
+        newInput.setAttribute('class', 'addInput');
+        document.getElementById('myDiv').appendChild(newInput);
+    };
+
     </script>
 </body>
 </html>
