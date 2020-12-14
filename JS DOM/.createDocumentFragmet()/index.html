@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createDocumentFragment</title>
+</head>
+<body>
+    <ul id="myList">
+
+    </ul>
+
+
+    <script>
+
+/* 
+The createDocumentFragment() method creates an imaginary Node object, with all the properties and methods of the Node object.
+
+The createDocumentFragment() method is usefull when you want to extract parts of your document, change, add, or delete, some of the content, and insert it back to your document. 
+*/
+        let ul = document.getElementById('myList');
+        let fragment = document.createDocumentFragment();
+
+        let li1 = document.createElement('li');
+        let li2 = document.createElement('li');
+
+        li1.textContent = 'Apple';
+        li2.textContent = 'Banana';
+
+        fragment.appendChild(li1);
+        fragment.appendChild(li2);
+
+        ul.appendChild(fragment);
+
+    </script>  
+</body>
+</html>

@@ -31,3 +31,21 @@ Element.textContent = 'Welcome guest!';
 --- create HTML tag with text
 
 myDiv.innerHTML = '<p>Hy, I am innerHTML</p>';
+ ---------------------------------------------------
+*** .createDocumentFragment() ***
+--- The createDocumentFragment() method creates an imaginary Node object, with all the properties and methods of the Node object. The createDocumentFragment() method is usefull when you want to extract parts of your document, change, add, or delete, some of the content, and insert it back to your document. 
+
+        let ul = document.getElementById('myList');
+        let fragment = document.createDocumentFragment();
+
+        let li1 = document.createElement('li');
+        let li2 = document.createElement('li');
+
+        li1.textContent = 'Apple';
+        li2.textContent = 'Banana';
+
+        fragment.appendChild(li1);
+        fragment.appendChild(li2);
+
+        ul.appendChild(fragment);
+ ---------------------------------------------------
