@@ -105,4 +105,17 @@ let banana = ULchildren[2];
 let bananaCopy = banana.cloneNode(true);  // true - means deep coping (copy text too)
  2) add to the end of the <ul> parent Tag
 UL.appendChild(bananaCopy);
- ---------------------------------------------------
+---------------------------------------------------
+*** :first-of-type ***
+
+--- The :first-of-type selector matches every element that is the first child, of a particular type, of its parent.
+
+let item1 = document.querySelector('#myList > li:first-of-type');
+---------------------------------------------------
+*** .nextElementSibling ***
+
+--- The nextElementSibling property returns the element immediately following the specified element, in the same tree level.
+The difference between this property and nextSibling, is that nextSibling returns the next sibling node as an element node, a text node or a comment node, while nextElementSibling returns the next sibling node as an element node (ignores text and comment nodes).
+
+let item2 = item1.nextElementSibling;
+---------------------------------------------------

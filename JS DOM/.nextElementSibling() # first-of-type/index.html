@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.nextElementSibling | :first-of-type</title>
+</head>
+<body>
+    <ul id="myList">
+        <li>Oragone</li>
+        <li>Apple</li>
+        <li>Peach</li>
+        <li>Banana</li>       
+    </ul>
+
+<!-- ----------------------------------------------------------------------- -->
+
+    <script>
+        /* The nextElementSibling property returns the element immediately following the specified element, in the same tree level.
+
+        The difference between this property and nextSibling, is that nextSibling returns the next sibling node as an element node, a text node or a comment node, while nextElementSibling returns the next sibling node as an element node (ignores text and comment nodes). */
+
+        // The :first-of-type selector matches every element that is the first child, of a particular type, of its parent.
+        let apple = document.querySelector('#myList > li:first-of-type');
+        
+        let peach = apple.nextElementSibling;
+        console.log(peach);
+        
+    </script>
+</body>
+</html>
