@@ -4,7 +4,7 @@
 let newP = document.createElement('p');
 ---------------------------------------------------
 *** .appendChild() ***
---- add HTML child TAG to parent TAG 
+--- add HTML child TAG to parent TAG at the end
 
 document.body.appendChild(newP);
 document.querySelector('div').appendChild(newP);
@@ -88,4 +88,21 @@ ul.insertBefore(OrangeLI, peach);
             parent.insertBefore(child, firstChild);
         }
         addBeginnig(ul, plum);
+ ---------------------------------------------------
+*** .children ***
+
+const UL = document.getElementById('myList');
+let ULchildren = UL.children;
+let item3 = ULchildren[2];
+ ---------------------------------------------------
+*** .cloneNode() ***
+
+const UL = document.getElementById('myList');
+let ULchildren = UL.children;
+let banana = ULchildren[2];
+
+ 1) make a copy
+let bananaCopy = banana.cloneNode(true);  // true - means deep coping (copy text too)
+ 2) add to the end of the <ul> parent Tag
+UL.appendChild(bananaCopy);
  ---------------------------------------------------
