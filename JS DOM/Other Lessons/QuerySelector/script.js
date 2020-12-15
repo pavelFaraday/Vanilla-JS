@@ -34,6 +34,19 @@ console.log(paras[2]); // shows third p tag
 
 /* -------------------------------------------------------------------------- */
 
-
 const class_errors = document.querySelectorAll('.error');
 console.log(class_errors);
+
+/* -------------------------------------------------------------------------- */
+
+let container2 = document.querySelector('#container2');
+let box2 = container2.querySelector('.box');
+console.log(box2);
+// <p class="box">constainer 2 - box 2</p>
+
+// -------------- or ----------------
+
+let container_2 = document.querySelector('#container2 .box');
+console.log(container_2);
+// <p class="box">constainer 2 - box 2</p>
+/* -------------------------------------------------------------------------- */
