@@ -17,6 +17,9 @@ document.body.setAttribute('class', 'nightMode');
 
 __change value/name
 document.getElementById('water').setAttribute('name', 'Gordon');
+
+__delete attribute
+myDiv.removeAttribute('data-name');
 ---------------------------------------------------
 *** .textContent() ***   
 --- get and set text content of a node/element 
@@ -61,3 +64,10 @@ MYPARA.classList.replace('red-bg', 'gray-bg');
 
 --- toggle Class
 MYPARA.classList.toggle('yellow-bg');
+ ---------------------------------------------------
+ *** .dataset() ***
+ --- change data value
+ myDiv.dataset.IAmFrom = 'England';
+
+--- Epmty Data
+myDiv.dataset.IAmFrom = '';

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dataset</title>
+</head>
+<body>
+    <div id='myDiv' data-name="Giorgio" data-I-am-from="Georgia">
+        sample text
+    </div>
+
+    <script>
+        let myDiv = document.getElementById('myDiv');
+        // console.log(myDiv.dataset);
+
+        // change data values
+        myDiv.dataset.name = 'MonaLiza';
+        myDiv.dataset.IAmFrom = 'England';
+        console.log(myDiv.dataset);
+
+        // Epmty Data
+        myDiv.dataset.IAmFrom = '';
+        // delete Data as attribute
+        myDiv.removeAttribute('data-name');
+    </script>
+</body>
+</html>
