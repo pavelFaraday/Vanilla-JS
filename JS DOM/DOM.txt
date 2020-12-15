@@ -130,3 +130,9 @@ let item2 = item1.nextElementSibling;
     h = rect.height;
     console.log(x, y, w, h);
 ---------------------------------------------------
+*** .outerHTML ***
+
+--- The outerHTML property sets or returns the HTML element and all it's content, including the start tag, it's attributes, and the end tag.
+
+h1.outerHTML = '<p id="red-bg">I have been changed as Para</p>';
+---------------------------------------------------
