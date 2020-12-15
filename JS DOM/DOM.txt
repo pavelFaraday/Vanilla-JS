@@ -136,3 +136,15 @@ let item2 = item1.nextElementSibling;
 
 h1.outerHTML = '<p id="red-bg">I have been changed as Para</p>';
 ---------------------------------------------------
+*** Bubbling vs Capturing ***
+
+bubbling:
+    bottom -> top 
+    from child - > to parent
+    false (default)
+
+Capturing:
+    top -> bottom 
+    from parent - > to child
+    true
+---------------------------------------------------
