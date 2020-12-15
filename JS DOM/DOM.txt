@@ -119,3 +119,14 @@ The difference between this property and nextSibling, is that nextSibling return
 
 let item2 = item1.nextElementSibling;
 ---------------------------------------------------
+*** .getBoundingClientRect() ***
+
+--- The getBoundingClientRect() method returns the size of an element and its position relative to the viewport. This method returns a DOMRect object with eight properties: left, top, right, bottom, x, y, width, height.
+
+    let rect = div.getBoundingClientRect();
+    x = rect.left;
+    y = rect.top;
+    w = rect.width;
+    h = rect.height;
+    console.log(x, y, w, h);
+---------------------------------------------------
