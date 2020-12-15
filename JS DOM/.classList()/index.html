@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classList</title>
+    <style>
+        .bold {
+            font-weight: bold;
+        }
+        .red-bg {
+            background-color: rgb(218, 32, 32);
+        }
+        .white {
+            color: white;
+        }
+        .gray-bg {
+            background:rgb(146, 146, 146);
+        }
+        .yellow-bg {
+            background:rgba(216, 231, 0, 0.603);
+            width: 50%;
+            padding: 50px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="title">My Website</h2>
+    <p id="myPara">
+        I am Para
+    </p>
+    <button onclick="addClass()">add Class</button>
+    <button onclick="replaceClass()">replace class</button>
+    <br>
+    <br>
+    <button onclick="removeClass()">remove class</button>
+    <br>
+    <br>
+    <button onclick="toggleClass()">toggle class</button>
+    
+<!-- ----------------------------------------------------------------------- -->
+    
+    <script>
+        const MYPARA = document.getElementById('myPara');
+        function addClass(){
+            MYPARA.classList.add('red-bg', 'bold', 'white');
+        }
+        function removeClass(){
+            MYPARA.classList.remove('red-bg', 'bold', 'white', 'gray-bg');
+        }
+        function replaceClass(){
+            MYPARA.classList.replace('red-bg', 'gray-bg');
+        }
+        function toggleClass(){
+            MYPARA.classList.toggle('yellow-bg');
+        }
+    </script>
+</body>
+</html>

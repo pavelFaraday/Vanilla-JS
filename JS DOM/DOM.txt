@@ -49,3 +49,15 @@ myDiv.innerHTML = '<p>Hy, I am innerHTML</p>';
 
         ul.appendChild(fragment);
  ---------------------------------------------------
+ *** .classList() ***
+--- add Class
+MYPARA.classList.add('red-bg', 'bold', 'white');
+
+--- remove Class
+MYPARA.classList.remove('red-bg', 'bold', 'white', 'gray-bg');
+
+--- replace Class
+MYPARA.classList.replace('red-bg', 'gray-bg');
+
+--- toggle Class
+MYPARA.classList.toggle('yellow-bg');
