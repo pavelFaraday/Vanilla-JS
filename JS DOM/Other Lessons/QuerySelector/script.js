@@ -37,6 +37,22 @@ console.log(paras[2]); // shows third p tag
 const class_errors = document.querySelectorAll('.error');
 console.log(class_errors);
 
+class_errors.forEach(item => {
+    item.style.color = 'red';
+    item.style.backgroundColor = 'black';
+    item.style.padding = '20px';
+    item.style.width = '40%';
+});
+
+//-----------------
+
+let ul = document.querySelector('#myList');
+let lis = ul.querySelectorAll('li');
+
+lis.forEach(item2 => {
+    item2.style.fontSize = '40px';
+});
+
 /* -------------------------------------------------------------------------- */
 
 let container2 = document.querySelector('#container2');
