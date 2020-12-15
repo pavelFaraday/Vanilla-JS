@@ -1,8 +1,32 @@
-*** .createElement() ***
---- create new HTML TAG 
+.appendChild()
+.setAttribute()
+.removeAttribute
+.textContent()
+.innerHTML
+.outerHTML
+.createElement()
+.createDocumentFragment()
+.classList()
+.classList.add
+.classList.remove
+.classList.replace
+.classList.toggle
+.dataset()
+.insertBefore()
+.children
+.cloneNode()
+:first-of-type
+.nextElementSibling
+.getBoundingClientRect()
+Bubbling vs Capturing
+.title
 
-let newP = document.createElement('p');
 ---------------------------------------------------
+
+---------------------------------------------------
+
+---------------------------------------------------
+
 *** .appendChild() ***
 --- add HTML child TAG to parent TAG at the end
 
@@ -34,6 +58,18 @@ Element.textContent = 'Welcome guest!';
 --- create HTML tag with text
 
 myDiv.innerHTML = '<p>Hy, I am innerHTML</p>';
+ --------------------------------------------------- 
+*** .outerHTML ***
+
+--- The outerHTML property sets or returns the HTML element and all it's content, including the start tag, it's attributes, and the end tag.
+
+h1.outerHTML = '<p id="red-bg">I have been changed as Para</p>';
+ ---------------------------------------------------
+ *** .createElement() ***
+ 
+--- create new HTML TAG 
+
+let newP = document.createElement('p');
  ---------------------------------------------------
 *** .createDocumentFragment() ***
 --- The createDocumentFragment() method creates an imaginary Node object, with all the properties and methods of the Node object. The createDocumentFragment() method is usefull when you want to extract parts of your document, change, add, or delete, some of the content, and insert it back to your document. 
@@ -53,6 +89,7 @@ myDiv.innerHTML = '<p>Hy, I am innerHTML</p>';
         ul.appendChild(fragment);
  ---------------------------------------------------
  *** .classList() ***
+
 --- add Class
 MYPARA.classList.add('red-bg', 'bold', 'white');
 
@@ -66,6 +103,7 @@ MYPARA.classList.replace('red-bg', 'gray-bg');
 MYPARA.classList.toggle('yellow-bg');
  ---------------------------------------------------
  *** .dataset() ***
+
  --- change data value
  myDiv.dataset.IAmFrom = 'England';
 
@@ -130,12 +168,6 @@ let item2 = item1.nextElementSibling;
     h = rect.height;
     console.log(x, y, w, h);
 ---------------------------------------------------
-*** .outerHTML ***
-
---- The outerHTML property sets or returns the HTML element and all it's content, including the start tag, it's attributes, and the end tag.
-
-h1.outerHTML = '<p id="red-bg">I have been changed as Para</p>';
----------------------------------------------------
 *** Bubbling vs Capturing ***
 
 bubbling:
@@ -147,4 +179,10 @@ Capturing:
     top -> bottom 
     from parent - > to child
     true
+---------------------------------------------------
+*** .title ***
+
+--- change title of page
+
+document.title = `I changed title`;
 ---------------------------------------------------
