@@ -11,11 +11,8 @@ console.log(attr_a.getAttribute('href'));
 // 3) set/change value of choosed/gotten attribute 
 attr_a.setAttribute('href', 'https://getbootstrap.com/');
 
-
 // 4) change text in a tag (because we changed its pass)
 attr_a.innerText = 'Bootstrap';
-
-
 
 /* -------------------------------------------------------------------------- */
 
