@@ -71,3 +71,21 @@ MYPARA.classList.toggle('yellow-bg');
 
 --- Epmty Data
 myDiv.dataset.IAmFrom = '';
+ ---------------------------------------------------
+ *** .insertBefore() ***
+
+--- in parent <ul> push new made child <li> (OrangeLI), before inserted #peach child
+ul.insertBefore(OrangeLI, peach);
+
+--- add at the beginnig of parent node:
+
+        let ul = document.getElementById('myList');
+        let plum = document.createElement('li');
+        plum.textContent = 'Plum';
+
+        function addBeginnig(parent, child) {
+            let firstChild = parent.firstChild;
+            parent.insertBefore(child, firstChild);
+        }
+        addBeginnig(ul, plum);
+ ---------------------------------------------------

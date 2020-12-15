@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node.insertBefore</title>
+</head>
+<body>
+    <ul id="myList">
+        <li>Oragone</li>
+        <li>Apple</li>
+        
+        <li id="peach">Peach</li>
+        <li>Banana</li>       
+    </ul>
+
+<!-- ----------------------------------------------------------------------- -->
+
+    <script>
+        let ul = document.getElementById('myList');
+        let peach = document.getElementById('peach');
+
+        let OrangeLI = document.createElement('li');
+        OrangeLI.textContent = 'Orange';
+        OrangeLI.style.color = 'red';
+
+        // in parent <ul> push new child <li> (OrangeLI), before #peach child
+        ul.insertBefore(OrangeLI, peach);
+
+
+        // add at the beginnig of parent node
+        let plum = document.createElement('li');
+        plum.textContent = 'Plum';
+        plum.style.color = 'green';
+
+        function addBeginnig(parent, child) {
+            let firstChild = parent.firstChild;
+            parent.insertBefore(child, firstChild);
+        }
+        addBeginnig(ul, plum);
+        
+    </script>
+</body>
+</html>
