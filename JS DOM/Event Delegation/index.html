@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+</head>
+<body>
+    <ul id="myList">
+        <li>Banana</li>
+        <li>Orange</li>
+        <li>Peach</li>
+    </ul>
+    
+    <script>
+        let ul = document.getElementById('myList');
+
+        ul.addEventListener('click', (e) => {
+            let target = e.target;
+             
+            if (target.matches('li')) {
+                target.style.backgroundColor = 'red';
+            }    
+        });
+
+    </script>
+</body>
+</html>
