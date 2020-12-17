@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insertAdjacentElement</title>
+</head>
+<body>
+
+<span style="color:red">My span</span>
+
+<h2 id="myH2">My Header</h2>
+
+<button onclick="myFunction()">Move span</button>
+
+
+    <script>
+/* 
+The insertAdjacentElement() method inserts a the specified element into a specified position.
+
+"afterbegin -- After the beginning of the element (as the first child)"
+"beforeend -- Before the end of the element (as the last child)"
+"afterend -- After the element"
+"beforebegin -- Before the element"
+*/
+
+function myFunction() {
+  var s = document.getElementsByTagName("span")[0];
+  var h = document.getElementById("myH2");
+  h.insertAdjacentElement("afterend", s);
+}
+
+    </script>
+</body>
+</html>
