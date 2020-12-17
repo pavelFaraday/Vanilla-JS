@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element.matches()</title>
+</head>
+<body>
+    <p id="myPara" data-myName="Geoge">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque vel quasi sequi excepturi, veniam ratione quo commodi. Recusandae suscipit cum, veritatis, natus itaque, harum iste amet ea nam corporis odio.</p>
+
+    <script>
+// The matches() method returns a Boolean value indicating whether an element is matched by a specific CSS selector or not.
+
+        let myPara = document.getElementById('myPara');
+
+        let result = myPara.matches('#myPara');
+        let result2 = myPara.matches('.myPara');
+        let result3 = myPara.matches('[data-myName]');
+        let result4 = myPara.matches('p');
+        console.log(result); // true
+        console.log(result2); // false
+        console.log(result3); // true
+        console.log(result4); // true
+
+    </script>
+</body>
+</html>

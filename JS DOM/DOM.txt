@@ -23,6 +23,8 @@ Bubbling vs Capturing
 .insertAdjacentHTML()
 .insertAdjacentElement()
 .insertAdjacentText()
+.matches()
+
 
 ---------------------------------------------------
 
@@ -215,4 +217,19 @@ document.title = `I changed title`;
 "beforeend -- Before the end of the element (as the last child)"
 "afterend -- After the element"
 "beforebegin -- Before the element"
+---------------------------------------------------
+*** .matches() ***
+
+--- The matches() method returns a Boolean value indicating whether an element is matched by a specific CSS selector or not.
+
+        let myPara = document.getElementById('myPara');
+
+        let result = myPara.matches('#myPara');
+        let result2 = myPara.matches('.myPara');
+        let result3 = myPara.matches('[data-myName]');
+        let result4 = myPara.matches('p');
+        console.log(result); // true
+        console.log(result2); // false
+        console.log(result3); // true
+        console.log(result4); // true
 ---------------------------------------------------
