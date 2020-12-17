@@ -20,6 +20,7 @@
 .getBoundingClientRect()
 Bubbling vs Capturing
 .title
+.insertAdjacentHTML()
 
 ---------------------------------------------------
 
@@ -185,4 +186,13 @@ Capturing:
 --- change title of page
 
 document.title = `I changed title`;
+---------------------------------------------------
+*** .insertAdjacentHTML() ***
+
+--- The insertAdjacentHTML() method inserts a text as HTML, into a specified position.
+
+"afterbegin -- After the beginning of the element (as the first child)"
+"beforeend -- Before the end of the element (as the last child)"
+"afterend -- After the element"
+"beforebegin -- Before the element"
 ---------------------------------------------------

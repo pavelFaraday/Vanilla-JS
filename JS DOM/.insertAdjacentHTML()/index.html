@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insertAdjacentHTML</title>
+</head>
+<body>
+
+    <p id="myPara">Lorem ipsum dolor sit <em>amet</em> consectetur adipisicing.</p>
+
+    <script>
+/* 
+"afterbegin -- After the beginning of the element (as the first child)"
+"beforeend -- Before the end of the element (as the last child)"
+"afterend -- After the element"
+"beforebegin -- Before the element"
+*/
+        let myPara = document.getElementById('myPara');
+        myPara.insertAdjacentHTML('beforebegin', '<strong>beforebegin</strong>');
+        /* 
+        Banana
+        Lorem ipsum dolor sit amet consectetur adipisicing. 
+        */
+
+        myPara.insertAdjacentHTML('afterend', '<strong>afterend</strong>');
+        /* 
+        Lorem ipsum dolor sit amet consectetur adipisicing.
+        afterend
+        */
+
+        myPara.insertAdjacentHTML('afterbegin', '<strong>afterbegin </strong>');
+        /* afterbegin Lorem ipsum dolor sit amet consectetur adipisicing. */
+
+        myPara.insertAdjacentHTML('beforeend', '<strong> beforeend</strong>');
+        /* Lorem ipsum dolor sit amet consectetur adipisicing. beforeend */
+
+    </script>
+</body>
+</html>
