@@ -22,6 +22,7 @@ Bubbling vs Capturing
 .title
 .insertAdjacentHTML()
 .insertAdjacentElement()
+.insertAdjacentText()
 
 ---------------------------------------------------
 
@@ -205,3 +206,13 @@ document.title = `I changed title`;
 "beforeend -- Before the end of the element (as the last child)"
 "afterend -- After the element"
 "beforebegin -- Before the element"
+---------------------------------------------------
+*** .insertAdjacentText() ***
+
+--- The insertAdjacentText() method inserts a the specified element into a specified position.
+
+"afterbegin -- After the beginning of the element (as the first child)"
+"beforeend -- Before the end of the element (as the last child)"
+"afterend -- After the element"
+"beforebegin -- Before the element"
+---------------------------------------------------

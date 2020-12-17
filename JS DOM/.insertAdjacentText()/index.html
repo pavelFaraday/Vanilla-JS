@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <title>insertAdjacentText</title>
+<body>
+
+<h1>HTML DOM insertAdjacentText() Method</h1>
+
+<p>This method inserts a specified text, into a specified position.</p>
+
+<h2 id="myH2">My Header</h2>
+
+<p>Click the button to insert some text after the header:</p>
+
+<button onclick="myFunction()">Insert text</button>
+
+<script>
+/* The insertAdjacentText() method inserts a the specified element into a specified position.
+
+"afterbegin -- After the beginning of the element (as the first child)"
+"beforeend -- Before the end of the element (as the last child)"
+"afterend -- After the element"
+"beforebegin -- Before the element"
+*/
+
+function myFunction() {
+  var h = document.getElementById("myH2");
+  h.insertAdjacentText("afterbegin", "My inserted text");
+}
+
+</script>
+
+</body>
+</html>
