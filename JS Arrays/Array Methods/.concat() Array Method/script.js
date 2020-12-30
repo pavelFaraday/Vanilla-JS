@@ -14,6 +14,7 @@ const mergedArr = arr_1.concat(arr_2, arr_3);
 console.log(mergedArr);
 // [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
 
+
 /* -------------------------------------------------------------------------- */
 
 // other way of cantination
