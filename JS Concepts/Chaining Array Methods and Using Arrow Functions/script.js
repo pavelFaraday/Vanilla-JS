@@ -2,6 +2,7 @@
 /*              Chaining Array Methods and Using Arrow Functions              */
 /* -------------------------------------------------------------------------- */
 
+
 let people = [
     {"id":123, "name":"Rick Deckard", "email":"rick@bladerunner.org"},
     {"id":456, "name":"Roy Batty", "email":"roy@replicant.io"},
