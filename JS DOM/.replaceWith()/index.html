@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>.replaceWith()</title>
+</head>
+<body>
+    <!-- The ChildNode.replaceWith() method replaces this ChildNode in the children list of its parent with a set of Node or DOMString objects. DOMString objects are inserted as equivalent Text nodes. -->
+
+    <div id="example">
+        <p>sample Text</p>
+    </div>
+
+    <script>
+        let pTag = document.querySelector('#example p');
+
+        let newInput = document.createElement('input');
+        newInput.value = 'I am new';
+
+        let newBTN = document.createElement('button');
+        newBTN.textContent = 'me too';
+
+        // pTag.replaceWith(newInput, newBTN, 'and I am some text');
+
+// ----------------------------------------------------------------------- 
+
+        let newStrong = document.createElement('strong');
+        newStrong.textContent = 'Text Strong';
+        pTag.childNodes[0].replaceWith(newStrong);
+
+
+
+    </script>
+</body>
+</html>

@@ -24,6 +24,8 @@ Bubbling vs Capturing
 .insertAdjacentElement()
 .insertAdjacentText()
 .matches()
+.append()
+.replaceWith()
 
 
 ---------------------------------------------------
@@ -232,4 +234,18 @@ document.title = `I changed title`;
         console.log(result2); // false
         console.log(result3); // true
         console.log(result4); // true
+---------------------------------------------------
+
+*** .append() ***
+
+--- .append() method inserts a set of Node objects or DOMString objects after the last child of the ParentNode. 
+
+parentDiv.append(child1, child2, textNode, ` some more text`);
+---------------------------------------------------
+
+*** .replaceWith() ***
+
+--- The ChildNode.replaceWith() method replaces this ChildNode in the children list of its parent with a set of Node or DOMString objects. DOMString objects are inserted as equivalent Text nodes.
+
+pTag.replaceWith(newInput, newBTN, 'and I am some text');
 ---------------------------------------------------
