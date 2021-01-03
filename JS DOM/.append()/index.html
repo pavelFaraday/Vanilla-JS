@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append Multiple Elements</title>
+</head>
+<body>
+    <ul class="summary">
+        <li>list 1</li>
+        <li>list 2</li>
+        <li>list 3</li>
+    </ul>
+
+    <div id="myDiv"></div>
+
+
+    <script>
+        const MYDIV = document.getElementById('myDiv');
+
+        let strong = document.createElement('strong');
+        let em = document.createElement('em');
+        let textNode = document.createTextNode(' Text Node');
+
+        strong.textContent = 'Text Strong';
+        em.textContent = ' Text em';
+
+        MYDIV.append(strong, em, textNode, ` some more text`);
+    </script>
+</body>
+</html>
