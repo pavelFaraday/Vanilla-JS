@@ -8,6 +8,19 @@ const bob = {
     sister: 'jane',
   },
 };
+
+// const firstName = bob.first;
+// const lastName = bob.last;
+// const sister = bob.siblings.sister;
+// console.log(firstName,lastName,sister);
+
+/* -------------------------- Object destructuring - Simple Example -------------------------- */
+//  Property names must match !
+// const { first, last, city } = bob;
+// console.log(first, last, city); // bob sanders chicago
+
+/* -------------------------------------------------------------------------- */
+
 const {
   first: firstName,
   last,
@@ -15,16 +28,23 @@ const {
   zip,
   siblings: { sister: favoriteSibling },
 } = bob;
+
 console.log(firstName, last, city, zip, favoriteSibling);
 
-// const firstName = bob.first;
-// const lastName = bob.last;
-// const sister = bob.siblings.sister;
+ 
 
-// console.log(firstName,lastName,sister);
 
 function printPerson(person) {
-  console.log(person.first);
+  const { first, last, city } = person;
+  console.log(first, last, city);
+}
+
+printPerson(bob);
+
+/* ----------------------------- or -> another way ----------------------------- */
+
+function printPerson({last,city,siblings:{sister}}) {
+  console.log(last, city, sister);
 }
 
 printPerson(bob);
