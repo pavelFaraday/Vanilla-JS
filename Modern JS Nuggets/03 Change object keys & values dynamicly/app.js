@@ -16,3 +16,4 @@ setState("wishes", []); // create new key-value
 
 console.log(state);
 // { name: 'John', isLogedin: true, age: 46, wishes: [] }
+// wakatime
