@@ -19,7 +19,6 @@ const { job, ...rest } = person;
 console.log(job, rest);
 
 // functions
-
 const getAverage = (name, ...scores) => {
   console.log(name);
   console.log(scores);
