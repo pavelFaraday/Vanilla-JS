@@ -2,7 +2,7 @@
 // Width/Height - window, any element
 // innerHeight - window
 // innnerWidth - window
-// getBoundingClientRect() - any element
+// .getBoundingClientRect() - get width & Height of any element 
 
 console.log('height', window.innerHeight)
 console.log('width', window.innerWidth)
