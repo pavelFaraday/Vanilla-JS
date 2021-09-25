@@ -6,8 +6,6 @@
 
 const url = 'https://www.course-api.com/react-tours-project'
 
-// console.log(fetch(url))
-
 // fetch(url)
 //   .then((resp) => resp.json())
 //   .then((data) => console.log(data))
