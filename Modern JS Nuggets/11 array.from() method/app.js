@@ -21,6 +21,8 @@ const items = Array.from({ length: 120 }, (_, index) => {
 })
 
 const itemsPerPage = 14
+
+// The Math.ceil() function always rounds a number up to the next largest integer.
 const pages = Math.ceil(items.length / itemsPerPage)
 
 const newItems = Array.from({ length: pages }, (_, index) => {
